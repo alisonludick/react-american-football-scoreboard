@@ -19,8 +19,8 @@ function App() {
         setlionHomeScore(lionHomeScore + 7);
     };
 
-    const decrementLionScore = () => {
-        setlionHomeScore(lionHomeScore - 1);
+    const fieldLionScore = () => {
+        setlionHomeScore(lionHomeScore + 3);
     };
 
     // for Tiger's Score:
@@ -33,7 +33,7 @@ function App() {
     };
 
     const decrementTigerScore = () => {
-        settigerHomeScore(tigerHomeScore - 1);
+        settigerHomeScore(tigerHomeScore + 3);
     };
 
   return (
@@ -59,7 +59,7 @@ function App() {
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
           <button className="homeButtons__touchdown" onClick={incrementLionScore}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick={decrementLionScore}>Home Field Goal</button>
+          <button className="homeButtons__fieldGoal" onClick={fieldLionScore}>Home Field Goal</button>
         </div>
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={incrementTigerScore}>Away Touchdown</button>

@@ -1,10 +1,40 @@
 //TODO: STEP 1 - Import the useState hook.
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
+
+  const [lionHomeScore, setlionHomeScore] = useState(0);
+
+    const [tigerHomeScore, settigerHomeScore] = useState(0);
+
+    // for Lion's Score:
+    const resetLionScore = () => {
+        setlionHomeScore(0);
+    };
+
+    const incrementLionScore = () => {
+        setScore(lionHomeScore + 1);
+    };
+
+    const decrementLionScore = () => {
+        setScore(lionHomeScore - 1);
+    };
+
+    // for Tiger's Score:
+    const resetTigersScore = () => {
+        settigerHomeScore(0);
+    };
+
+    const incrementTigerScore = () => {
+        setScore(tigerHomeScore + 1);
+    };
+
+    const decrementTigerScore = () => {
+        setScore(tigerHomeScore - 1);
+    };
 
   return (
     <div className="container">
